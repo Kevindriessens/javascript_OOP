@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.groen {
+        color: green;
+    }
+    </style>
+</head>
+<body>
+    <p id="eersteP" class="vet, groen" style="color: red">Hier vind je alle informatie over mij.</p>
+
+
+    <script>
+        let kleur2 = window.getComputedStyle(document.getElementById("eersteP")).color;
+        console.log(`kleur2: ${kleur2}`);
+
+        document.getElementsByClassName("contentLinks")[0].style.color = "green";
+
+        
+
+        </script>
+
+</body>
+</html>
