@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .groen{
+                color: green;
+         }
+
+    </style>
     
 </head>
 <body>
@@ -64,6 +70,35 @@
          }
          let alleElementenMetClass = document.querySelectorAll(".vet");
          console.log(alleElementenMetClass);
+
+         document.getElementsByTagName("h1")[0].setAttribute("class", "groen");
+         document.getElementById("eersteP").setAttribute("class", "groen");
+
+         document.getElementsByTagName('a')[0].setAttribute("target", "_blank");
+         console.log(document.getElementsByTagName('a')[0].getAttribute("target"));
+
+         document.getElementsByTagName("p")[0].removeAttribute("class");
+
+
+         let contentLinks1 = document.getElementsByClassName("contentLinks");
+         let lengte2 = contentLinks1.length;
+         for (let i= 0; i < lengte2; i++) {
+            console.log(contentLinks1[i].getAttribute("href"));
+            contentLinks1[i].setAttribute("href", "#");
+            console.log(contentLinks1[i].getAttribute("href"));
+           
+    
+        }
+
+        document.getElementsByClassName("contentLinks")[0].style.color = "green";
+
+            
+
+
+
+
+
+
 
  
 </script>
