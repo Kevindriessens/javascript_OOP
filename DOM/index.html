@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1>Welkom</h1>
+<a href="http://www.google.be">click mij</a>
+<p id="eersteP" class="vet">Welkom op mijn <strong>website</strong>. </p>
+<p class="vet">En nog een vette tekst.</p>
+<p>Hier vind je alle informatie over mij.</p>
+<a href="http://www.hbvl.be">www.hbvl.be</a>
+
+<div id="content">
+	<h2>Links op mijn site</h2>
+	<p><a class="contentLinks" href="cv.html">Bekijk mijn <strong>CV</strong>.</a></p>
+<p><a class="contentLinks" href="portfolio.html">Wil je mijn <strong>portfolio</strong> eens zien?</a></p>
+
+</div>
+
+
+<script>
+"use strict";
+      let alleLinks = document.getElementsByTagName("a");
+        console.log(alleLinks);
+        let eersteLink = document.getElementsByTagName("a")[0];
+        console.log(eersteLink);
+        console.log(eersteLink.href);
+        let allelinks = document.getElementsByTagName("a")
+        let lengte = allelinks.length;
+        for (let i = 0; i < lengte; i++) {
+            console.log(alleLinks[i].innerHTML);
+        }
+        let paragraaf = document.getElementById("eersteP");
+        console.log(paragraaf);
+        console.log(paragraaf.innerHTML);
+        console.log(document.getElementById("content"));
+        console.log(document.getElementById("content").innerHTML);
+        console.log(document.getElementById("content").innerText);
+
+        let content = document.getElementById("content");
+        console.log(content.innerHTML);
+        console.log(content);
+        console.log(content.innerText);
+
+        let vetClass = document.getElementsByClassName("vet");
+        console.log(vetClass);
+
+        let vetClass2 = document.getElementsByClassName("vet")[1];
+        console.log(vetClass2);
+        console.log(vetClass2.innerText);
+
+
+
+
+        let contentLinks = document.getElementsByClassName("contentLinks");
+        let lengte1 = contentLinks.length;
+        for (let i= 0; i < lengte1; i++)
+         { console.log(contentLinks[i].innerText);
+
+         }
+         let alleElementenMetClass = document.querySelectorAll(".vet");
+         console.log(alleElementenMetClass);
+
+ 
+</script>
+</body>
+</html>
