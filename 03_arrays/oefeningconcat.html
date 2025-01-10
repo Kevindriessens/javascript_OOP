@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        "use strict";
+        let semester1 = ["januari", "Februari", "maart", "april", "mei", "juni"];
+        let semester2 = ["juli", "augustus", "september", "oktober", "november", "december"];
+
+        let totaleJaar = semester1.concat(semester2);
+        console.log(totaleJaar);
+
+        let zomer = totaleJaar.slice(5,8);
+        console.log(zomer);
+
+        let totaleJaarEnJaartal = totaleJaar.map(function (maand) {
+        return maand + " 2025";
+        });
+        console.log(totaleJaarEnJaartal);
+
+        let maandenMetEenR = totaleJaar.slice();
+        maandenMetEenR.splice(4,4);
+        console.log(`${maandenMetEenR}`);
+
+
+        totaleJaar.pop();        
+        totaleJaar.shift();
+        totaleJaar.push("december");
+        totaleJaar.unshift("januari");
+        console.log(totaleJaar);
+
+        
+        function telMaanden(totaal, maanden) {
+        return totaal + 1;
+        }
+
+        let totaalAantalMaanden = totaleJaar.reduce(telMaanden,0);
+        console.log(totaalAantalMaanden);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

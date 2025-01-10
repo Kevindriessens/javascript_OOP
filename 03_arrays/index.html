@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myArray= [1, 2];
+let myNewArray= myArray.concat(3);
+console.log(myNewArray);
+
+let myNewArray2= myArray.concat(3, 4, "Jan");
+console.log(myNewArray2);
+
+
+       let myArray2= ["a","b","c","d"];
+let returnWaarde= myArray2.splice(2,2);
+console.log(`returnWaarde: ${returnWaarde}`); 
+console.log(`myArray2: ${myArray2}`);
+
+        myArray.splice(1, 0, "e", "f");
+console.log(`myArray:  ${myArray}`);
+
+let myArray3 = ["Jan", "Piet", "Joris"];
+myArray3.splice(1, 1, "An");
+console.log(myArray3);
+
+    </script>
+</body>
+</html>
