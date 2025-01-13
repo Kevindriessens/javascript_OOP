@@ -41,6 +41,28 @@
         let totaalAantalMaanden = totaleJaar.reduce(telMaanden,0);
         console.log(totaalAantalMaanden);
 
+        function korteMaand(afgekorte, maanden) {
+
+            return afgekorte.concat(maanden.substring(0,3));
+        }
+            
+
+        let afgekorteMaanden = totaleJaar.reduce(korteMaand,[]);
+        console.log(afgekorteMaanden);
+
+
+
+
+        
+
+
+
+            
+
+
+
+
+
 
 
 

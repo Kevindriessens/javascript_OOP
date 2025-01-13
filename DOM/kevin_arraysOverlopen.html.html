@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+
+        "use strict";
+
+
+
+        
+        let designVakken = ["HTML&CSS", "Photoshop", "Interface", "Drupal"];
+        console.log(designVakken);
+        
+        let ontwikkelingsVakken = ["Workflows", "Javascript", "jQuery", "PHP"];
+        console.log(ontwikkelingsVakken);
+        
+        let alleVakken = ["HTML&CSS", "Photoshop", "Interface", "Drupal", "Workflows", "Javascript", "jQuery", "PHP"];
+        console.log(alleVakken);
+
+        
+        let puurProgrammeren = ontwikkelingsVakken.slice(1,4);
+        console.log(puurProgrammeren);
+
+        
+        let afdelingVakken = alleVakken.map(function(vak) {
+            return "FeDev - " + vak;
+        });
+        console.log(afdelingVakken);
+
+        
+        ontwikkelingsVakken.splice(3, 0, "JS-OOP", "PHP-OOP");
+        console.log(ontwikkelingsVakken);
+
+        
+        alleVakken.push("JS-OOP", "PHP-OOP");
+        console.log(alleVakken);
+
+        
+        alleVakken.unshift("Illustrator");
+        console.log(alleVakken);
+
+        
+        alleVakken.shift();
+        console.log(alleVakken);
+
+        
+        let totaalVakken = alleVakken.reduce(function(vakken) {
+            return vakken + 1;
+        }, 0);
+        console.log(totaalVakken);
+
+        let punten = [87, 93, 75, 81, 74, 85, 92, 91, 67, 65];
+        console.log(punten);
+
+       function combineerPunten (resultaat, vak, index) {
+        resultaat.push(`${vak} - ${punten[index]}`);
+        return resultaat;
+       }
+       let vakkenEnPunten = alleVakken.reduce(combineerPunten,[]);
+       console.log(vakkenEnPunten.join(" ")); 
+
+
+
+
+
+
+
+
+
+
+
+       
+
+        
+
+    </script>
+    
+</body>
+</html>
