@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        window.addEventListener("DOMContentLoaded", function(){
+            document.getElementById("mijnUl").addEventListener("click", clikUl);
+
+        }) 
+        function clikUl(event){
+            console.clear();
+            console.log(`this: ${this}`);
+            console.log(`target: ${event.target}`);
+            console.log(`currentTarget: ${event.currentTarget}`);
+            console.log(`target.innerHTML: ${event.target.innerHTML}`);
+            console.log(`currentTarget.innerHTML: ${event.currentTarget.innerHTML}`);	  
+        }
+    </script>
+</head>
+<body>
+    <ul id="mijnUl">
+        <li>lijstitem1</li>
+           <li>lijstitem2</li>
+           <li>lijstitem3</li>
+        </ul>
+        
+</body>
+</html>
