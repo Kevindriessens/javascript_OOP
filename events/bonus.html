@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        }
+        
+        .color-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        }
+        
+        .color-item span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border-radius: 50%;
+        }</style>
+
+<script>
+    "use strict";
+    document.addEventListener("DOMContentLoaded", function() {
+    
+    document.getElementById("color-form").addEventListener("click", function (e)  {
+        e.preventDefault();        
+        let colorInput = document.getElementById("color-input").value.trim();
+    
+        if (colorInput !== "") {
+        let lijst = document.createElement("li");
+        lijst.className = "color-item";
+        lijst.textContent = colorInput;
+
+        let span = document.createElement("span");
+        span.style.backgroundColor = colorInput;
+
+        let deleteKnop = document.createElement("button");
+        deleteKnop.className = "delete-btn";
+        deleteKnop.textContent = "delete";
+
+        lijst.append(deleteKnop);
+
+        document.getElementById("color-list").append(lijst);
+
+        deleteKnop.addEventListener("click", function () {
+            lijst.remove();
+        });        
+
+        lijst.append(span);
+        
+        }
+    });
+});
+
+</script>
+
+
+
+</head>
+<body>
+
+
+    <h1>Color management</h1>
+<form id="color-form">
+<input type="text" id="color-input" placeholder="Type a color (bv. red, #ff0000)" required size="50">
+<button type="submit">Add</button>
+</form>
+<ul id="color-list"></ul>
+
+</body>
+</html>
